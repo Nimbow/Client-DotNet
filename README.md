@@ -12,7 +12,7 @@ You find the complete API documentation here: https://www.nimbow.com/sms-api/nim
 		<add key="Nimbow.Api.Key" value="<YOUR API KEY>" />
 		<!-- 	Optional default sender, 
 				will be used when you don't specify a sender in your code -->
-		<add key="Nimbow.Api.Default" value="YourSender" />
+		<add key="Nimbow.Api.Default.From" value="YourSender" />
 	```
 
 2. Use it
