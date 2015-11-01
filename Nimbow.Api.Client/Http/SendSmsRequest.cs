@@ -14,6 +14,16 @@ namespace Nimbow.Api.Client.Http
 
         public bool Test { get; set; }
 
+        public bool GetMessageId { get; set; }
+
+        public bool GetMessageParts { get; set; }
+
+        public bool GetFrom { get; set; }
+
+        public bool GetTo { get; set; }
+
+        public bool GetNetCost { get; set; }
+
         public string ToQueryParameterString()
         {
             return string.Join("&", ToQueryParameters());
@@ -26,6 +36,11 @@ namespace Nimbow.Api.Client.Http
             if (!string.IsNullOrEmpty(To)) yield return $"to={To}";
             yield return $"text={Text}";
             if (Test) yield return "test=1";
+            if (GetMessageId) yield return "GetMessageId=1";
+            if (GetMessageParts) yield return "GetMessageParts=1";
+            if (GetFrom) yield return "GetFrom=1";
+            if (GetTo) yield return "GetTo=1";
+            if (GetNetCost) yield return "GetNetCost=1";
         }
     }
 }

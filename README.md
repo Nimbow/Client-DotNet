@@ -50,6 +50,16 @@ You can also use the interface `INimbowApiClientAsync` (or `INimbowApiClient`) a
 This allows you to integrate the Nimbow API client into your favourite IoC framework.
 And you can easily mock any dependency to the Nimbow API client in your UnitTests.
 
+## Configuration / AppSettings
+* `Nimbow.Api.Url`: string, required, the URL pointing to the Nimbow API endpoint
+* `Nimbow.Api.Key`: string, required, the API Key to use when communicating with the Nimbow API
+* `Nimbow.Api.Default.From`: string, optional, default sender of each SMS if no sender will be specified in your code
+* `Nimbow.Api.Default.GetMessageId`: boolean, optional, specifies whether should return message id in the result by default
+* `Nimbow.Api.Default.GetMessageParts`: boolean, optional, specifies whether should return the message parts count in the result by default
+* `Nimbow.Api.Default.GetFrom`: boolean, optional, specifies whether should return the sender in the result by default
+* `Nimbow.Api.Default.GetTo`: boolean, optional, specifies whether should return the receiver in the result by default
+* `Nimbow.Api.Default.GetNetCost`: boolean, optional, specifies whether should return the net cost in the result by default
+
 ## Notes
 *Missing API calls will be added soon!*
 

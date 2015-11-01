@@ -89,5 +89,50 @@ namespace Nimbow.Api.Client
 
             return binarySms.Assign(s => s.Data = data);
         }
+
+        public static TSms WithMessageIdInResult<TSms>(this TSms sms)
+            where TSms : Sms
+        {
+            Contract.Requires(sms != null);
+            Contract.Ensures(Contract.Result<TSms>() == sms);
+
+            return sms.Assign(s => s.GetMessageId = true);
+        }
+
+        public static TSms WithMessagePartsInResult<TSms>(this TSms sms)
+            where TSms : Sms
+        {
+            Contract.Requires(sms != null);
+            Contract.Ensures(Contract.Result<TSms>() == sms);
+
+            return sms.Assign(s => s.GetMessageParts = true);
+        }
+
+        public static TSms WithFromInResult<TSms>(this TSms sms)
+            where TSms : Sms
+        {
+            Contract.Requires(sms != null);
+            Contract.Ensures(Contract.Result<TSms>() == sms);
+
+            return sms.Assign(s => s.GetFrom = true);
+        }
+
+        public static TSms WithToInResult<TSms>(this TSms sms)
+            where TSms : Sms
+        {
+            Contract.Requires(sms != null);
+            Contract.Ensures(Contract.Result<TSms>() == sms);
+
+            return sms.Assign(s => s.GetTo = true);
+        }
+
+        public static TSms WithNetCostInResult<TSms>(this TSms sms)
+            where TSms : Sms
+        {
+            Contract.Requires(sms != null);
+            Contract.Ensures(Contract.Result<TSms>() == sms);
+
+            return sms.Assign(s => s.GetNetCost = true);
+        }
     }
 }
