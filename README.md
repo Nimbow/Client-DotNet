@@ -38,3 +38,6 @@ You find the complete API documentation here: https://www.nimbow.com/sms-api/nim
 You can also use the interface _INimbowApiClientAsync_ and the corresponding implementation _NimbowApiClientAsync_.
 This allows you to integrate the Nimbow API client into your favourite IoC framework.
 And you can easily mock any dependency to _INimbowApiClientAsync_ in your UnitTests.
+
+## Notes
+_Missing API calls and a synchronous client will be added soon!_
