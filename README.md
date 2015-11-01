@@ -27,23 +27,23 @@ NuGet-Package: <https://www.nuget.org/packages/Nimbow.Api.Client/>
 	```
 
 4. Start sending SMS
-    * asynchronous
-	    ```C#
-	    await Sms
-		    .CreateText()
-		    .From("MyApp")
-		    .To("+4917123456789")
-		    .Text("Hello World!")
-		    .SendAsync();
-	    ```
-    * synchronous
-        ```C#
-	    Sms.CreateText()
-		    .From("MyApp")
-		    .To("+4917123456789")
-		    .Text("Hello World!")
-		    .Send();
-	    ```
+	* asynchronous
+	```C#
+	await Sms
+	    .CreateText()
+	    .From("MyApp")
+	    .To("+4917123456789")
+	    .Text("Hello World!")
+	    .SendAsync();
+	```
+	* synchronous
+	```C#
+	Sms.CreateText()
+	    .From("MyApp")
+	    .To("+4917123456789")
+	    .Text("Hello World!")
+	    .Send();
+	```
 
 ## Usage with IoC container or UnitTest frameworks
 You can also use the interface `INimbowApiClientAsync` (or `INimbowApiClient`) and the corresponding implementation `NimbowApiClientAsync` (or `NimbowApiClient`).
