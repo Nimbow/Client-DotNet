@@ -1,5 +1,4 @@
-﻿using System.Diagnostics.Contracts;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Nimbow.Api.Client.Http;
 
 namespace Nimbow.Api.Client
@@ -8,10 +7,7 @@ namespace Nimbow.Api.Client
     {
         public async Task<SendSmsResult> SendSmsAsync(Sms sms)
         {
-            Contract.Requires(sms != null);
-            Contract.Ensures(Contract.Result<Task<SendSmsResult>>() != null);
-
-            using (var client = new NimbowApiClientHttpWrapper())
+            using (var client = new NimbowApiClientHttpAsyncWrapper())
             {
                 var request = sms.ToSendSmsRequest();
                 var response = await client.SendSmsAsync(request);

@@ -50,14 +50,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BinarySms.cs" />
+    <Compile Include="Http\NimbowApiClientHttpSyncWrapper.cs" />
     <Compile Include="Http\SendSmsRequest.cs" />
     <Compile Include="Http\SendSmsResponse.cs" />
+    <Compile Include="INimbowApiClient.cs" />
     <Compile Include="INimbowApiClientAsync.cs" />
+    <Compile Include="NimbowApiClient.cs" />
     <Compile Include="SendSmsResult.cs" />
     <Compile Include="SendSmsStatusCode.cs" />
     <Compile Include="Http\SmsType.cs" />
     <Compile Include="NimbowApiClientAsync.cs" />
-    <Compile Include="Http\NimbowApiClientHttpWrapper.cs" />
+    <Compile Include="Http\NimbowApiClientHttpAsyncWrapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sms.cs" />
     <Compile Include="Sms.Floating.cs" />
