@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|AnyCPU">
+      <Configuration>Debug</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|AnyCPU">
+      <Configuration>Release</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>88c629ee-9922-4715-b87c-314f5e58dfea</ProjectGuid>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NuProjPath Condition=" '$(NuProjPath)' == '' ">$(MSBuildExtensionsPath)\NuProj\</NuProjPath>
+  </PropertyGroup>
+  <Import Project="$(NuProjPath)\NuProj.props" Condition="Exists('$(NuProjPath)\NuProj.props')" />
+  <PropertyGroup Label="Configuration">
+    <Id>Nimbow.Api.Client</Id>
+    <Version>1.0.0</Version>
+    <Title>Nimbow API Client</Title>
+    <Authors>Nimbow</Authors>
+    <Owners>Nimbow</Owners>
+    <Summary>The official .NET Client library for the Nimbow API. (http://www.nimbow.com)</Summary>
+    <Description>This libarary contains the async client for easy usage of the Nimbow API in your .NET based projects.</Description>
+    <ReleaseNotes>
+    </ReleaseNotes>
+    <ProjectUrl>https://github.com/Nimbow/Client-DotNet</ProjectUrl>
+    <LicenseUrl>
+    </LicenseUrl>
+    <Copyright>Copyright © NimbusFive GmbH</Copyright>
+    <Tags>Nimbow SMS API ReST Http Nimbow.Api.Client</Tags>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Nimbow.Api.Client\Nimbow.Api.Client.csproj" />
+  </ItemGroup>
+  <Import Project="$(NuProjPath)\NuProj.targets" />
+</Project>

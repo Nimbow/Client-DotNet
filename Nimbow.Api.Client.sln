@@ -5,6 +5,10 @@ VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nimbow.Api.Client", "Nimbow.Api.Client\Nimbow.Api.Client.csproj", "{10492D05-1A40-49F6-BC70-DE3FDCBCC92F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NuGet", "NuGet", "{44B7E8C5-3C2C-4E34-9044-6E324FCD2156}"
+EndProject
+Project("{FF286327-C783-4F7A-AB73-9BCBAD0D4460}") = "Nimbow.Api.Client.nupkg", "Nimbow.Api.Client.nupkg\Nimbow.Api.Client.nupkg.nuproj", "{88C629EE-9922-4715-B87C-314F5E58DFEA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,8 +19,15 @@ Global
 		{10492D05-1A40-49F6-BC70-DE3FDCBCC92F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{10492D05-1A40-49F6-BC70-DE3FDCBCC92F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{10492D05-1A40-49F6-BC70-DE3FDCBCC92F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88C629EE-9922-4715-B87C-314F5E58DFEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88C629EE-9922-4715-B87C-314F5E58DFEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88C629EE-9922-4715-B87C-314F5E58DFEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88C629EE-9922-4715-B87C-314F5E58DFEA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{88C629EE-9922-4715-B87C-314F5E58DFEA} = {44B7E8C5-3C2C-4E34-9044-6E324FCD2156}
 	EndGlobalSection
 EndGlobal
