@@ -32,6 +32,7 @@
     </LicenseUrl>
     <Copyright>Copyright © NimbusFive GmbH</Copyright>
     <Tags>Nimbow SMS API ReST Http Nimbow.Api.Client</Tags>
+    <IconUrl>https://secure.gravatar.com/avatar/b48c6779eef2c946ce02f228499a0433</IconUrl>
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\Nimbow.Api.Client\Nimbow.Api.Client.csproj" />
