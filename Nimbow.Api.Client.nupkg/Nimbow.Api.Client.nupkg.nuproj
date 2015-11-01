@@ -19,7 +19,7 @@
   <Import Project="$(NuProjPath)\NuProj.props" Condition="Exists('$(NuProjPath)\NuProj.props')" />
   <PropertyGroup Label="Configuration">
     <Id>Nimbow.Api.Client</Id>
-    <Version>1.0.0</Version>
+    <Version>1.0.5</Version>
     <Title>Nimbow API Client</Title>
     <Authors>Nimbow</Authors>
     <Owners>Nimbow</Owners>
@@ -35,6 +35,12 @@
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\Nimbow.Api.Client\Nimbow.Api.Client.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="content\web.config.uninstall.xdt" />
+    <Content Include="content\app.config.uninstall.xdt" />
+    <Content Include="content\app.config.install.xdt" />
+    <Content Include="content\web.config.install.xdt" />
   </ItemGroup>
   <Import Project="$(NuProjPath)\NuProj.targets" />
 </Project>
