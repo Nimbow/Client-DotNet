@@ -6,21 +6,25 @@ You find the complete API documentation here: https://www.nimbow.com/sms-api/nim
 
 ## Usage
 
-1. Install it (NuGet)
+1. Get a free Nimbow account
+	1. Register: https://portal.nimbow.com/registration
+	2. Grab your API Key: https://portal.nimbow.com/apisettings
+
+2. Add the client to your project (e.g. via NuGet)
 	```PowerShell
 	Install-Package Nimbow.Api.Client
 	```
 
-2. Configure it (web.config / app.config)
+3. Adjust the configuration (web.config / app.config)
 	```XML
 	<add key="Nimbow.Api.Url" value="https://api.nimbow.com/" />
-	<add key="Nimbow.Api.Key" value="<YOUR API KEY>" />
+	<add key="Nimbow.Api.Key" value="PASTE YOUR API KEY HERE" />
 	<!-- 	Optional default sender, 
 			will be used when you don't specify a sender in your code -->
 	<add key="Nimbow.Api.Default.From" value="YourSender" />
 	```
 
-3. Use it
+4. Start sending SMS
 	```C#
 	await Sms
 		.CreateText()
