@@ -4,13 +4,15 @@ This is the official C#/.NET client for the Nimbow API (http://www.nimbow.com).
 
 You find the complete API documentation here: https://www.nimbow.com/sms-api/nimbow-api/
 
+NuGet-Package: https://www.nuget.org/packages/Nimbow.Api.Client/
+
 ## Usage
 
 1. Get a free Nimbow account
 	1. Register: https://portal.nimbow.com/registration
 	2. Grab your API Key: https://portal.nimbow.com/apisettings
 
-2. Add the client to your project (e.g. via NuGet)
+2. Add the client to your project (e.g. via NuGet Package Manager Console)
 	```PowerShell
 	Install-Package Nimbow.Api.Client
 	```
