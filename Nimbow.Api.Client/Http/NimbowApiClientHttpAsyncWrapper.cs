@@ -1,24 +1,25 @@
 using System;
 using System.Configuration;
+using System.Diagnostics.Contracts;
 using System.Net.Http;
 using System.Threading.Tasks;
 
 namespace Nimbow.Api.Client.Http
 {
-    internal sealed class NimbowApiClientHttpWrapper : IDisposable
+    internal sealed class NimbowApiClientHttpAsyncWrapper : IDisposable
     {
         #region Init
 
         private bool _disposed;
-        private readonly HttpClient _httpClient;
+        private readonly Lazy<HttpClient> _httpClient;
 
-        public NimbowApiClientHttpWrapper()
+        public NimbowApiClientHttpAsyncWrapper()
         {
-            _httpClient = new HttpClient
+            _httpClient = new Lazy<HttpClient>(() => new HttpClient
             {
                 BaseAddress = new Uri(GetAppSetting("Nimbow.Api.Url"), UriKind.Absolute),
                 DefaultRequestHeaders = {{"X-Nimbow-API-Key", GetAppSetting("Nimbow.Api.Key")}}
-            };
+            });
         }
 
         #endregion
@@ -42,7 +43,7 @@ namespace Nimbow.Api.Client.Http
             GC.SuppressFinalize(this);
         }
 
-        ~NimbowApiClientHttpWrapper()
+        ~NimbowApiClientHttpAsyncWrapper()
         {
             Dispose(false);
         }
@@ -53,7 +54,10 @@ namespace Nimbow.Api.Client.Http
             {
                 if (disposing)
                 {
-                    _httpClient.Dispose();
+                    if (_httpClient.IsValueCreated)
+                    {
+                        _httpClient.Value.Dispose();
+                    }
                 }
 
                 _disposed = true;
@@ -66,7 +70,15 @@ namespace Nimbow.Api.Client.Http
 
         public async Task<SendSmsResponse> SendSmsAsync(SendSmsRequest request)
         {
-            var httpResponse = await _httpClient.GetAsync(new Uri($"sms?{request.ToQueryParameterString()}", UriKind.Relative));
+            Contract.Requires(request != null);
+            Contract.Ensures(Contract.Result<Task<SendSmsResponse>>() != null);
+
+            if (_disposed)
+            {
+                throw new ObjectDisposedException(nameof(NimbowApiClientHttpAsyncWrapper));
+            }
+
+            var httpResponse = await _httpClient.Value.GetAsync(new Uri($"sms?{request.ToQueryParameterString()}", UriKind.Relative));
 
             httpResponse.EnsureSuccessStatusCode();
 

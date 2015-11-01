@@ -27,22 +27,31 @@ NuGet-Package: <https://www.nuget.org/packages/Nimbow.Api.Client/>
 	```
 
 4. Start sending SMS
+	* asynchronous
 	```C#
 	await Sms
-		.CreateText()
-		.From("MyApp")
-		.To("+4917123456789")
-		.Text("Hello World!")
-		.SendAsync();
+	    .CreateText()
+	    .From("MyApp")
+	    .To("+4917123456789")
+	    .Text("Hello World!")
+	    .SendAsync();
+	```
+	* synchronous
+	```C#
+	Sms.CreateText()
+	    .From("MyApp")
+	    .To("+4917123456789")
+	    .Text("Hello World!")
+	    .Send();
 	```
 
 ## Usage with IoC container or UnitTest frameworks
-You can also use the interface `INimbowApiClientAsync` and the corresponding implementation `NimbowApiClientAsync`.
+You can also use the interface `INimbowApiClientAsync` (or `INimbowApiClient`) and the corresponding implementation `NimbowApiClientAsync` (or `NimbowApiClient`).
 This allows you to integrate the Nimbow API client into your favourite IoC framework.
-And you can easily mock any dependency to `NimbowApiClientAsync` in your UnitTests.
+And you can easily mock any dependency to the Nimbow API client in your UnitTests.
 
 ## Notes
-*Missing API calls and a synchronous client will be added soon!*
+*Missing API calls will be added soon!*
 
 ## Samples
 

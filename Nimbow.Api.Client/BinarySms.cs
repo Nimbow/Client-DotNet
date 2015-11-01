@@ -13,6 +13,7 @@ namespace Nimbow.Api.Client
             Contract.Ensures(Contract.Result<SendSmsRequest>() != null);
 
             var request = base.ToSendSmsRequest();
+            request.Type = SmsType.Binary;
             request.Text = Data == null ? null : BitConverter.ToString(Data).Replace("-", string.Empty);
             return request;
         }
