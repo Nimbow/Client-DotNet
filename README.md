@@ -49,7 +49,7 @@ And you can easily mock any dependency to `NimbowApiClientAsync` in your UnitTes
 ### ASP.NET MVC integrated Multi-Factor Authentication
 *Nimbow.Samples.AspNetMvcMfa.csproj*
 
-This project shows you how easy you can achive Two-Factor Authentication when you combine the standard ASP.NET MVC project template with the *Nimbow API Client*.
+This project shows you how easy you can achieve Two-Factor Authentication when you combine the standard ASP.NET MVC project template with the *Nimbow API Client*.
 
 #### Prerequisites
 Before you start the example, at first put your API key into the web.config.
