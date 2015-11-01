@@ -9,6 +9,16 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NuGet", "NuGet", "{44B7E8C5
 EndProject
 Project("{FF286327-C783-4F7A-AB73-9BCBAD0D4460}") = "Nimbow.Api.Client.nupkg", "Nimbow.Api.Client.nupkg\Nimbow.Api.Client.nupkg.nuproj", "{88C629EE-9922-4715-B87C-314F5E58DFEA}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{F5346D5A-1A8D-44E8-BFD2-EBE8AA59F43B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nimbow.Samples.AspNetMvcMfa", "Samples\Nimbow.Samples.AspNetMvcMfa\Nimbow.Samples.AspNetMvcMfa.csproj", "{94271A67-D68D-4520-9F8B-9D2719B45018}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{787BECF8-53A0-48C0-A618-CF7D1D14075E}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		README.md = README.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,11 +33,16 @@ Global
 		{88C629EE-9922-4715-B87C-314F5E58DFEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{88C629EE-9922-4715-B87C-314F5E58DFEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{88C629EE-9922-4715-B87C-314F5E58DFEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94271A67-D68D-4520-9F8B-9D2719B45018}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94271A67-D68D-4520-9F8B-9D2719B45018}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94271A67-D68D-4520-9F8B-9D2719B45018}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94271A67-D68D-4520-9F8B-9D2719B45018}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{88C629EE-9922-4715-B87C-314F5E58DFEA} = {44B7E8C5-3C2C-4E34-9044-6E324FCD2156}
+		{94271A67-D68D-4520-9F8B-9D2719B45018} = {F5346D5A-1A8D-44E8-BFD2-EBE8AA59F43B}
 	EndGlobalSection
 EndGlobal

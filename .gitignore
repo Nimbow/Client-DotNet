@@ -4,5 +4,7 @@
 
 /**/obj/
 /**/bin/
+/**/App_Data/
 /.vs/
 /packages/
+*.user
