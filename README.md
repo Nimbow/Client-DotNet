@@ -67,6 +67,7 @@ Missing:
 * Automatic Unicode recognition
 * Request DLR
 * Pass ClientRef
+* Send Flash SMS
 
 ## Samples
 
