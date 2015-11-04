@@ -27,6 +27,8 @@ namespace Nimbow.Api.Client
 
         public string To { get; set; }
 
+        public bool IsFlash { get; set; }
+
         public bool Test { get; set; }
 
         public bool GetMessageId { get; set; }
@@ -47,6 +49,7 @@ namespace Nimbow.Api.Client
             {
                 From = From,
                 To = To,
+                IsFlash = IsFlash,
                 Test = Test,
                 GetMessageId = GetMessageId,
                 GetMessageParts = GetMessageParts,
