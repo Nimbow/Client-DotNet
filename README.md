@@ -64,7 +64,6 @@ And you can easily mock any dependency to the Nimbow API client in your UnitTest
 *Missing API calls will be added soon!*
 
 Missing:
-* Automatic Unicode recognition
 * Request DLR
 * Pass ClientRef
 
