@@ -82,6 +82,22 @@ namespace Nimbow.Api.Client
             return textSms.Assign(s => s.Text = text);
         }
 
+        public static TextSms AsUnicode(this TextSms textSms)
+        {
+            Contract.Requires(textSms != null);
+            Contract.Ensures(Contract.Result<TextSms>() == textSms);
+
+            return textSms.Assign(s => s.IsUnicode = true);
+        }
+
+        public static TextSms WithAutomaticUnicodeRecognition(this TextSms textSms)
+        {
+            Contract.Requires(textSms != null);
+            Contract.Ensures(Contract.Result<TextSms>() == textSms);
+
+            return textSms.Assign(s => s.AutomaticUnicodeRecognition = true);
+        }
+
         public static BinarySms Data(this BinarySms binarySms, byte[] data)
         {
             Contract.Requires(binarySms != null);
