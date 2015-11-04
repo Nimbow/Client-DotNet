@@ -12,6 +12,8 @@ namespace Nimbow.Api.Client.Http
 
         public SmsType Type { get; set; }
 
+        public bool IsFlash { get; set; }
+
         public bool Test { get; set; }
 
         public bool GetMessageId { get; set; }
@@ -36,6 +38,7 @@ namespace Nimbow.Api.Client.Http
             if (!string.IsNullOrEmpty(To)) yield return $"to={To}";
             yield return $"text={Text}";
             if (Test) yield return "test=1";
+            if (IsFlash) yield return "flash=1";
             if (GetMessageId) yield return "GetMessageId=1";
             if (GetMessageParts) yield return "GetMessageParts=1";
             if (GetFrom) yield return "GetFrom=1";

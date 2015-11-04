@@ -90,6 +90,15 @@ namespace Nimbow.Api.Client
             return binarySms.Assign(s => s.Data = data);
         }
 
+        public static TSms AsFlash<TSms>(this TSms sms)
+            where TSms : Sms
+        {
+            Contract.Requires(sms != null);
+            Contract.Ensures(Contract.Result<TSms>() == sms);
+
+            return sms.Assign(s => s.IsFlash = true);
+        }
+
         public static TSms WithMessageIdInResult<TSms>(this TSms sms)
             where TSms : Sms
         {
