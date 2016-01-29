@@ -63,10 +63,6 @@ And you can easily mock any dependency to the Nimbow API client in your UnitTest
 ## Notes
 *Missing API calls will be added soon!*
 
-Missing:
-* Request DLR
-* Pass ClientRef
-
 ## Samples
 
 ### ASP.NET MVC integrated Multi-Factor Authentication
