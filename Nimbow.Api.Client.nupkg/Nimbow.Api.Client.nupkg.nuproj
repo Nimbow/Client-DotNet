@@ -19,13 +19,13 @@
   <Import Project="$(NuProjPath)\NuProj.props" Condition="Exists('$(NuProjPath)\NuProj.props')" />
   <PropertyGroup Label="Configuration">
     <Id>Nimbow.Api.Client</Id>
-    <Version>1.0.7</Version>
+    <Version>1.0.8</Version>
     <Title>Nimbow API Client</Title>
     <Authors>Nimbow</Authors>
     <Owners>Nimbow</Owners>
     <Summary>The official .NET Client library for the Nimbow API. (http://www.nimbow.com)</Summary>
     <Description>This libarary contains the async client for easy usage of the Nimbow API in your .NET based projects.</Description>
-    <ReleaseNotes>- Unicode SMS</ReleaseNotes>
+    <ReleaseNotes>Pass ClientRef; optional disable DeliveryReport</ReleaseNotes>
     <ProjectUrl>https://github.com/Nimbow/Client-DotNet</ProjectUrl>
     <LicenseUrl>
     </LicenseUrl>

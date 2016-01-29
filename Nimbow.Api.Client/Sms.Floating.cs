@@ -159,5 +159,14 @@ namespace Nimbow.Api.Client
 
             return sms.Assign(s => s.GetNetCost = true);
         }
+
+        public static TSms WithoutDeliveryReport<TSms>(this TSms sms)
+            where TSms : Sms
+        {
+            Contract.Requires(sms != null);
+            Contract.Ensures(Contract.Result<TSms>() == sms);
+
+            return sms.Assign(s => s.GetDeliveryReport = false);
+        }
     }
 }

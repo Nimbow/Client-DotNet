@@ -27,6 +27,8 @@ namespace Nimbow.Api.Client
 
         public string To { get; set; }
 
+        public string ClientRef { get; set; }
+
         public bool IsFlash { get; set; }
 
         public bool Test { get; set; }
@@ -39,6 +41,8 @@ namespace Nimbow.Api.Client
 
         public bool GetTo { get; set; }
 
+        public bool GetDeliveryReport { get; set; }
+
         public bool GetNetCost { get; set; }
 
         internal virtual SendSmsRequest ToSendSmsRequest()
@@ -49,12 +53,14 @@ namespace Nimbow.Api.Client
             {
                 From = From,
                 To = To,
+                ClientRef = ClientRef,
                 IsFlash = IsFlash,
                 Test = Test,
                 GetMessageId = GetMessageId,
                 GetMessageParts = GetMessageParts,
                 GetFrom = GetFrom,
                 GetTo = GetTo,
+                GetDeliveryReport = GetDeliveryReport,
                 GetNetCost = GetNetCost
             };
         }
